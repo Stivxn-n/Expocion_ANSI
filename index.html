@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exposición ANSI</title>
+
+  <!-- Aquí enlazamos nuestro archivo de estilos -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ENCABEZADO PRINCIPAL -->
+  <header>
+    <h1>ANSI</h1>
+    <p>American National Standards Institute</p>
+  </header>
+
+  <!-- BARRA DE NAVEGACIÓN -->
+  <nav>
+    <a href="#quees">¿Qué es?</a>
+    <a href="#historia">Historia</a>
+    <a href="#colores">Colores</a>
+    <a href="#ejemplos">Ejemplos</a>
+    <a href="#usos">Usos</a>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+
+    <!-- SECCIÓN 1: QUÉ ES ANSI -->
+    <section id="quees">
+      <h2>¿Qué es ANSI?</h2>
+
+      <p>
+        <strong>ANSI</strong> son las siglas de <em>American National Standards Institute</em>,
+        una organización de Estados Unidos que crea estándares para muchas industrias,
+        incluyendo la informática.
+      </p>
+
+      <p>
+        En programación, cuando decimos "ANSI" casi siempre nos referimos a los
+        <strong>códigos de escape ANSI</strong>. Estos son secuencias especiales de
+        caracteres que le dicen a la terminal cómo mostrar el texto:
+        con color, negrita, subrayado, etc.
+      </p>
+
+      <div class="imagen-caja">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/VT100_terminal.jpg/320px-VT100_terminal.jpg"
+          alt="Terminal VT100"
+        />
+        <p class="pie-imagen">Terminal VT100 — donde nacieron los códigos ANSI</p>
+      </div>
+
+    </section>
+
+    <!-- SECCIÓN 2: HISTORIA -->
+    <section id="historia">
+      <h2>Historia</h2>
+
+      <ul>
+        <li><strong>1918</strong> — Se funda el ANSI en EE.UU.</li>
+        <li><strong>1963</strong> — Se publica el estándar <strong>ASCII</strong>.</li>
+        <li><strong>1979</strong> — Se adoptan los <strong>códigos de escape</strong> para terminales.</li>
+        <li><strong>Años 80</strong> — El <strong>ANSI Art</strong> se vuelve muy popular.</li>
+        <li><strong>Hoy</strong> — Todos los sistemas operativos modernos lo usan.</li>
+      </ul>
+
+      <div class="imagen-caja">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Ansi.png/320px-Ansi.png"
+          alt="Ejemplo de ANSI Art"
+        />
+        <p class="pie-imagen">Ejemplo de ANSI Art</p>
+      </div>
+
+    </section>
+
+    <!-- SECCIÓN 3: COLORES -->
+    <section id="colores">
+      <h2>Colores ANSI</h2>
+
+      <p>Los códigos van dentro de una secuencia: <code>\e[</code> + número + <code>m</code></p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Color</th>
+            <th>Código</th>
+            <th>Vista previa</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Rojo</td>
+            <td><code>\e[31m</code></td>
+            <td><span class="muestra rojo">Texto rojo</span></td>
+          </tr>
+          <tr>
+            <td>Verde</td>
+            <td><code>\e[32m</code></td>
+            <td><span class="muestra verde">Texto verde</span></td>
+          </tr>
+          <tr>
+            <td>Amarillo</td>
+            <td><code>\e[33m</code></td>
+            <td><span class="muestra amarillo">Texto amarillo</span></td>
+          </tr>
+          <tr>
+            <td>Azul</td>
+            <td><code>\e[34m</code></td>
+            <td><span class="muestra azul">Texto azul</span></td>
+          </tr>
+          <tr>
+            <td>Magenta</td>
+            <td><code>\e[35m</code></td>
+            <td><span class="muestra magenta">Texto magenta</span></td>
+          </tr>
+          <tr>
+            <td>Cian</td>
+            <td><code>\e[36m</code></td>
+            <td><span class="muestra cian">Texto cian</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Para resetear el color: <code>\e[0m</code></p>
+
+    </section>
+
+    <!-- SECCIÓN 4: EJEMPLOS -->
+    <section id="ejemplos">
+      <h2>Ejemplos de código</h2>
+
+      <h3>Python</h3>
+      <pre>
+print("\033[32m Hola en verde \033[0m")
+print("\033[31m Error! \033[0m")
+print("\033[33m Advertencia \033[0m")
+      </pre>
+
+      <h3>Bash / Terminal</h3>
+      <pre>
+echo -e "\e[32m Éxito \e[0m"
+echo -e "\e[31m Error \e[0m"
+echo -e "\e[1m Negrita \e[0m"
+      </pre>
+
+      <h3>Así se ve en la terminal:</h3>
+      <div class="terminal">
+        <div class="terminal-barra">
+          <span class="punto rojo-pt"></span>
+          <span class="punto amarillo-pt"></span>
+          <span class="punto verde-pt"></span>
+          <span class="terminal-titulo">bash</span>
+        </div>
+        <div class="terminal-cuerpo">
+          <p><span class="dim">$</span> python3 colores.py</p>
+          <p><span class="t-verde">✔ Archivo guardado correctamente</span></p>
+          <p><span class="t-rojo">✖ Error: no se encontró el archivo</span></p>
+          <p><span class="t-amarillo">⚠ Advertencia: versión desactualizada</span></p>
+          <p><span class="t-azul">ℹ Info: conectando al servidor...</span></p>
+          <p><span class="dim">$ </span><span class="cursor">█</span></p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SECCIÓN 5: USOS -->
+    <section id="usos">
+      <h2>¿Para qué se usa?</h2>
+
+      <div class="tarjetas">
+        <div class="tarjeta">
+          <h3>📋 Logs de apps</h3>
+          <p>Errores en rojo, éxito en verde y advertencias en amarillo.</p>
+        </div>
+        <div class="tarjeta">
+          <h3>🛠 Dev tools</h3>
+          <p>Git, npm y pytest usan ANSI para resaltar resultados.</p>
+        </div>
+        <div class="tarjeta">
+          <h3>🎨 ANSI Art</h3>
+          <p>Imágenes hechas con caracteres de texto y colores.</p>
+        </div>
+        <div class="tarjeta">
+          <h3>💻 Scripts</h3>
+          <p>Barras de progreso y menús en la consola.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>Exposición sobre ANSI — HTML5 &amp; CSS3</p>
+    <p>Estándar ECMA-48 / ISO 6429</p>
+  </footer>
+
+</body>
+</html>
