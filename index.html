@@ -48,22 +48,12 @@
       </p>
 
       <div class="imagen-caja">
-       <img 
-         src="VT100_terminal.jpg" 
-         alt="Terminal VT100" />
-        
+        <img src="VT100_terminal.jpg" alt="Terminal VT100" />
         <p class="pie-imagen">Terminal VT100 Original — donde nacieron los códigos ANSI</p>
 
-        <img 
-         src="terminal.webp" 
-         alt="Terminal VT100 R" />
-        
+        <img src="terminal.webp" alt="Terminal VT100 R" />
         <p class="pie-imagen">Terminal VT100 Reproduction</p>
-
-         </div>
-
-
-      
+      </div>
 
     </section>
 
@@ -80,20 +70,11 @@
       </ul>
 
       <div class="imagen-caja">
-        <img 
-          src="ansiart.png" 
-          alt="Ejemplo de ANSI Art" />
-       
+        <img src="ansiart.png" alt="Ejemplo de ANSI Art" />
         <p class="pie-imagen">Ejemplo de ANSI Art de los años 80</p>
 
-
-        <img 
-          src="ansiartt.webp" 
-          alt="ANSI Art EVO" />
-       
-        <p class="pie-imagen">Ejemplo de ANSI y Ansii art</p>
-
-        
+        <img src="ansiartt.webp" alt="ANSI Art EVO" />
+        <p class="pie-imagen">Ejemplo de ANSI y ASCII art</p>
       </div>
 
     </section>
@@ -154,6 +135,7 @@
     <section id="ejemplos">
       <h2>Ejemplos de código</h2>
 
+      <!-- Python -->
       <h3>Python</h3>
       <pre>
 print("\033[32m Hola en verde \033[0m")
@@ -161,6 +143,7 @@ print("\033[31m Error! \033[0m")
 print("\033[33m Advertencia \033[0m")
       </pre>
 
+      <!-- Bash -->
       <h3>Bash / Terminal</h3>
       <pre>
 echo -e "\e[32m Éxito \e[0m"
@@ -168,6 +151,17 @@ echo -e "\e[31m Error \e[0m"
 echo -e "\e[1m Negrita \e[0m"
       </pre>
 
+      <!-- JavaScript -->
+      <h3>JavaScript (Node.js)</h3>
+      <pre>
+console.log("\x1b[32m Verde \x1b[0m")
+console.log("\x1b[31m Rojo \x1b[0m")
+console.log("\x1b[33m Amarillo \x1b[0m")
+console.log("\x1b[34m Azul \x1b[0m")
+console.log("\x1b[1m Negrita \x1b[0m")
+      </pre>
+
+      <!-- Terminal simulada -->
       <h3>Así se ve en la terminal:</h3>
       <div class="terminal">
         <div class="terminal-barra">
